@@ -1,5 +1,5 @@
 function calculate(args) {
-  let operator = args.op;
+  const operator = args.op;
   let result = 0;
   if (operator === '+') {
     result = args.n1 + args.n2;

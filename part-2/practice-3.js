@@ -1,7 +1,7 @@
 function calculate(data) {
-  let productsList = data.products;
-  let discount = data.discount;
-  let totalPrice = productsList.reduce((totalPrice, product) => totalPrice + product.price, 0);
+  const productsList = data.products;
+  const discount = 1 - data.discount;
+  const totalPrice = productsList.reduce((totalPrice, product) => totalPrice + product.price, 0);
   return totalPrice * discount;
 }
 

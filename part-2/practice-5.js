@@ -1,5 +1,5 @@
 function delayedResult(n1, n2, delayTime, callback) {
-  let output = n1 + n2;
+  const output = n1 + n2;
   window.setTimeout(callback.bind(null, output), delayTime);
 }
 

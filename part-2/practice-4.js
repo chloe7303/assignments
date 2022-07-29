@@ -2,7 +2,7 @@ function twoSum(nums, target) {
   let indexArray = [];
   nums.forEach((currentNum, currentIndex, array) => {
     // console.log(total, currentnum);
-    let theOtherNumber = target - currentNum;
+    const theOtherNumber = target - currentNum;
     if (array.includes(theOtherNumber)) indexArray.push(currentIndex);
   })
   return indexArray;
