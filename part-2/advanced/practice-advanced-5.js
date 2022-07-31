@@ -1,9 +1,9 @@
 function practice_5(students, student_objects) {
   students.forEach(student => {
     student_objects.forEach(student_object => {
-      if (student['student_id'] === student_object['student_id']) {
-        if (student['objects']) student['objects'] = [...student['objects'], student_object['object']]
-        else student['objects'] = [student_object['object']]
+      if (student.student_id === student_object.student_id) {
+        if (student.objects) student.objects = [...student.objects, student_object.object]
+        else student.objects = [student_object.object]
       }
     })
   });
