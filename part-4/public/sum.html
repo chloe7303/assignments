@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <label for="number">Sum up the number</label>
+  <input type="text" name="number" id="input" placeholder="enter number">
+  <button id="button">Submit</button>
+  <p id="result"></p>
+
+  <script>
+    const button = document.querySelector('#button');
+    const resultMessage = document.querySelector('#result');
+    button.addEventListener('click', () => {
+      const inputValue = document.querySelector('#input').value;
+      fetch(`http://localhost:3000/getData?number=${inputValue}`)
+        // Response.text() returns a promise that resolves with a String
+        .then(res => res.text())
+        .then(string => resultMessage.innerHTML = string)
+    })
+  </script>
+</body>
+
+</html>
